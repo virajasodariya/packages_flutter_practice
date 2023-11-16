@@ -1,8 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:packages_flutter_practice/FilePicker/file_picker.dart';
-import 'package:packages_flutter_practice/PdfView/pdf_view.dart';
-import 'package:packages_flutter_practice/UrlLauncher/url_launcher.dart';
-import 'package:packages_flutter_practice/WebView/web_view_example.dart';
+import 'package:packages_flutter_practice/all_packages.dart';
 
 void main() {
   runApp(const MyApp());
@@ -19,7 +16,7 @@ class MyApp extends StatelessWidget {
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
         useMaterial3: true,
       ),
-      home: const FilePickerExample(),
+      home: const AllPackages(),
     );
   }
 }
