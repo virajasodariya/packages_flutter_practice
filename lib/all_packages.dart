@@ -14,49 +14,54 @@ class AllPackages extends StatefulWidget {
 class _AllPackagesState extends State<AllPackages> {
   @override
   Widget build(BuildContext context) {
-    return ListView(
-      children: [
-        ElevatedButton(
-          onPressed: () {
-            Navigator.push(
-                context,
-                MaterialPageRoute(
-                  builder: (context) => const WebViewExample(),
-                ));
-          },
-          child: const Text("Web View"),
+    return Scaffold(
+      body: Center(
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            ElevatedButton(
+              onPressed: () {
+                Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                      builder: (context) => const WebViewExample(),
+                    ));
+              },
+              child: const Text("Web View"),
+            ),
+            ElevatedButton(
+              onPressed: () {
+                Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                      builder: (context) => const UrlLauncherExample(),
+                    ));
+              },
+              child: const Text("Url Launcher"),
+            ),
+            ElevatedButton(
+              onPressed: () {
+                Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                      builder: (context) => const PdfViewExample(),
+                    ));
+              },
+              child: const Text("Pdf View"),
+            ),
+            ElevatedButton(
+              onPressed: () {
+                Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                      builder: (context) => const FilePickerExample(),
+                    ));
+              },
+              child: const Text("File Picker"),
+            ),
+          ],
         ),
-        ElevatedButton(
-          onPressed: () {
-            Navigator.push(
-                context,
-                MaterialPageRoute(
-                  builder: (context) => const UrlLauncherExample(),
-                ));
-          },
-          child: const Text("Url Launcher"),
-        ),
-        ElevatedButton(
-          onPressed: () {
-            Navigator.push(
-                context,
-                MaterialPageRoute(
-                  builder: (context) => const PdfViewExample(),
-                ));
-          },
-          child: const Text("Pdf View"),
-        ),
-        ElevatedButton(
-          onPressed: () {
-            Navigator.push(
-                context,
-                MaterialPageRoute(
-                  builder: (context) => const FilePickerExample(),
-                ));
-          },
-          child: const Text("File Picker"),
-        ),
-      ],
+      ),
     );
   }
 }
